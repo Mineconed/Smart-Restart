@@ -1,0 +1,12 @@
+name: SmartRestart
+version: ${project.version}
+main: dk.mineconed.smartrestart.SmartRestart
+author: Mineconed
+api-version: 1.13
+commands:
+  smartrestart:
+    aliases: [sr]
+    usage: /smartrestart <status|now|cancel|reload>
+permissions:
+  smartrestart.admin:
+    default: op

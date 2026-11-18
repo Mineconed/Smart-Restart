@@ -1,0 +1,58 @@
+# SmartRestart
+# Made by Mineconed
+
+# Language: en or da
+language: en
+
+# Name shown in Discord messages
+server_name: "Minecraft"
+
+# Timezone for the schedule. Empty = the server's own timezone.
+# Examples: Europe/Copenhagen, America/New_York, UTC
+timezone: ""
+
+# Fixed restart times (24 hour clock, HH:mm)
+schedule:
+  enabled: true
+  times: ["06:00", "18:00"]
+
+# How long the countdown is (seconds) for scheduled, smart and /sr now restarts
+countdown_seconds: 300
+
+# When to warn in chat, title and with a sound (seconds left)
+warnings: [300, 240, 180, 120, 60, 30, 15, 10, 5, 4, 3, 2, 1]
+
+# What players see during the countdown
+display:
+  chat: true
+  title: true
+  actionbar: true
+  # Bossbar only works on 1.9 and newer
+  bossbar: true
+  sound: true
+
+# Smart restart: restart by itself when the server is struggling
+smart:
+  low_tps:
+    enabled: true
+    below: 12.0
+    minutes: 5
+  high_ram:
+    enabled: true
+    above_percent: 92
+    minutes: 5
+  # Restart after this many hours online. 0 = off
+  max_uptime_hours: 0
+
+# How to restart:
+#   shutdown        stops the server (your host or start script starts it again)
+#   spigot          uses the Spigot restart script (restart_script in spigot.yml)
+#   command:<cmd>   runs a console command, fx command:stop
+restart_method: shutdown
+
+# Discord webhook (leave empty to turn off)
+discord:
+  webhook_url: ""
+  bot_name: "SmartRestart"
+  # Send a message when the server is back online
+  online_message: true
