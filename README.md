@@ -21,5 +21,3 @@
 
 Permission: `smartrestart.admin` (op by default)
 
-## Build
-`mvn package` gives `target/SmartRestart.jar`.
